@@ -6,7 +6,7 @@ let square=Array.from(document.querySelectorAll('.grid div'));
 //console.log(square);
 let ScoreDisplay=document.getElementById('score');
 let StartBtn=document.getElementById('start-button');
- //dfljdl
+ 
 const GRID_WIDTH=10;
 
 const lTetromino = [
@@ -46,6 +46,7 @@ const lTetromino = [
 
 const shapes=[lTetromino,zTetromino,tTetromino,oTetromino,iTetromino];
 
+const shapes_colors=["orange","blue","green","red","yellow"];
 
 
 let ran=Math.floor(Math.random()*shapes.length);
@@ -54,12 +55,12 @@ let nextShape=ran;
 let curRotation=0;
 let curPosition=3;
 let cur=shapes[curShape][curRotation];
-
 let shapes_function=function()
 {
     for(let eachItem of cur)
     { //console.log(eachItem);
         square[curPosition+eachItem].classList.add("its");
+        square[curPosition+eachItem].style.backgroundColor=shapes_colors[curShape];
     }
 }
 
@@ -69,6 +70,8 @@ let remove_shape=function()
     for(let eachItem of cur)
     { //console.log(eachItem);
         square[curPosition+eachItem].classList.remove("its");
+        square[curPosition+eachItem].style.backgroundColor="black";
+
     }
 }
 
@@ -180,10 +183,15 @@ const upNextTetris=[
 
 function display_()
 {
-    displaySquares.forEach(item=>item.classList.remove('its'));
+    displaySquares.forEach(item=>{item.classList.remove('its')
+        
+        item.style.backgroundColor="black";
+
+        });
     //console.log(upNextTetris[nextShape]);
     upNextTetris[nextShape].forEach(index=>{
         displaySquares[displayIndex+index].classList.add('its');
+        displaySquares[displayIndex+index].style.backgroundColor=shapes_colors[nextShape];
     }
     );  
 }
