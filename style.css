@@ -1,36 +1,33 @@
-.grid{
-    width:200px;
-    height:400px;
-    background-color: red;
-    display:flex;
-    flex-wrap:wrap;
+.grid {
+  width: 200px;
+  height: 400px;
+  background-color: red;
+  display: flex;
+  flex-wrap: wrap;
 }
-.grid div{
-    height:20px;
-    width:20px;
-    
+.grid div {
+  height: 20px;
+  width: 20px;
 }
-.container{
-    display: flex;
+.container {
+  display: flex;
 }
-.its
-{
-    background-color: blue;
+.its {
+  background-color: blue;
 }
-.taken{
-   
+.taken {
 }
-.mini-grid{
-    width:80px;
-    height:80px;
-    background-color: red;
-    display:flex;
-    flex-wrap: wrap;
-    margin-left: 50px;
-
+.mini-grid {
+  width: 80px;
+  height: 80px;
+  background-color: red;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 50px;
 }
-.mini-grid div{
-    height:20px;
-    width:20px;
+.mini-grid div {
+  height: 20px;
+  width: 20px;
 }
-
+.just {
+}

@@ -6,7 +6,7 @@ let square=Array.from(document.querySelectorAll('.grid div'));
 //console.log(square);
 let ScoreDisplay=document.getElementById('score');
 let StartBtn=document.getElementById('start-button');
- 
+ //dfljdl
 const GRID_WIDTH=10;
 
 const lTetromino = [
